@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Search Results</title>
+</head>
+<body>
+    <h1>Appointment Search Results</h1>
+    {% if appointments %}
+        {% for appointment in appointments %}
+            <div>
+                <h3>Appointment ID: {{ appointment.Appointment_ID }}</h3>
+                <p>Patient Name: {{ appointment.patient_name }}</p>
+                <p>Patient Contact: {{ appointment.patient_contact }}</p>
+                <p>Appointment Date: {{ appointment.Appointment_date }}</p>
+                <p>Appointment Time: {{ appointment.Appointment_time }}</p>
+                <p>Doctor Name: {{ appointment.doctor_name }}</p>
+                <p>Reason: {{ appointment.Appointment_reason }}</p>
+                <p>Status: {{ appointment.Appointment_Status }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No appointments found.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment_Schedulee</title>
+</head>
+<body>
+    <h1>Appointment_Schedulee</h1>
+    <ul>
+    {% for appointment in Appointment_Schedulee %}
+        <li>{{ appointment.patient.name }} - {{ appointment.doctor.name }} - {{ appointment.date }} - {{ appointment.time }}</li>
+    {% empty %}
+        <li>No appointments found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Search Results</title>
+</head>
+<body>
+    <h1>Doctor Search Results</h1>
+    {% if doctors %}
+        {% for doctor in doctors %}
+            <div>
+                <h3>Doctor ID: {{ doctor.Doctor_ID }}</h3>
+                <p>Name: {{ doctor.Doctor_name }}</p>
+                <p>Address: {{ doctor.Doctor_address }}</p>
+                <p>Connection: {{ doctor.Doctor_Connection }}</p>
+                <p>Specialization: {{ doctor.Doctor_Specialization }}</p>
+                <p>Certificate: {{ doctor.Doctor_Certificate }}</p>
+                <p>Availability: {{ doctor.Doctor_availability }}</p>
+                <p>Appointments: {{ doctor.Doctor_Appointments }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No doctors found.</p>
+    {% endif %}
+</body>
+</html>

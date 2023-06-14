@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor_Record</title>
+</head>
+<body>
+    <h1>Doctor_Record</h1>
+    <ul>
+    {% for doctors in Doctor_Record %}
+        <li>{{ Doctor_ID }} - {{ Doctor_name }} - {{ Doctor_address }} - {{ Doctor_Connection }} - {{ Doctor_Specialization }} - {{ Doctor_Certificate }} - {{ Doctor_availability }} - {{ Doctor_Appointments }}</li>
+    {% empty %}
+        <li>No doctors found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prescription Search Results</title>
+</head>
+<body>
+    <h1>Prescription Search Results</h1>
+    {% if prescriptions %}
+        {% for prescription in prescriptions %}
+            <div>
+                <h3>Prescription ID: {{ prescription.Prescription_ID }}</h3>
+                <p>Patient Name: {{ prescription.Patient_name }}</p>
+                <p>Doctor Name: {{ prescription.Doctor_name }}</p>
+                <p>Prescription Date: {{ prescription.Prescription_date }}</p>
+                <p>Prescription Name: {{ prescription.Prescription_name }}</p>
+                <p>Prescription Dose: {{ prescription.Prescription_dose }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No prescriptions found.</p>
+    {% endif %}
+</body>
+</html>

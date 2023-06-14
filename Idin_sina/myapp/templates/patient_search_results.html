@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Search Results</title>
+</head>
+<body>
+    <h1>Patient Search Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Medical History</th>
+                <th>Insurance</th>
+                <th>Prescription</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in patients %}
+            <tr>
+                <td>{{ patient.Patient_ID }}</td>
+                <td>{{ patient.Patient_name }}</td>
+                <td>{{ patient.patient_address }}</td>
+                <td>{{ patient.patient_contact }}</td>
+                <td>{{ patient.patient_age }}</td>
+                <td>{{ patient.patient_gender }}</td>
+                <td>{{ patient.patient_medicalhistory }}</td>
+                <td>{{ patient.patient_insurance }}</td>
+                <td>{{ patient.prescription }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="9">No patients found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

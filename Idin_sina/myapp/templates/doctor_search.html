@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Search</title>
+</head>
+<body>
+    <h1>Doctor Search</h1>
+    <form method="post" action="{% url 'doctor_search' %}">
+        {% csrf_token %}
+        <input type="text" name="search_query" placeholder="Enter doctor name">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

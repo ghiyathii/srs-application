@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prescription_Record</title>
+</head>
+<body>
+    <h1>Prescription_Record</h1>
+    <ul>
+    {% for prescription in Prescription_Record %}
+        <li>{{ prescription.patient.name }} - {{ prescription.doctor.name }} - {{ prescription.date }} - {{ prescription.medication }}</li>
+    {% empty %}
+        <li>No prescriptions found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
